@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>HORAS DO DIA</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+body{
+    
+    font: normal 15pt Arial;
+    
+}
+header{
+    margin-top: 25px;
+    text-align: center;
+    color:white;
+
+   text-shadow: 5px 5px 10px black;
+
+}
+section{
+    border: 1px solid black;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: auto;
+    height:300px ;
+    width: 500px;
+    box-shadow:5px 5px 10px black;
+    margin-top: 10%;
+}
+div{
+text-align: center;
+ padding: 8px;
+}
+footer{
+display:flex;
+flex-direction:column;
+align-item:center;
+justify-content:center;
+text-align: center;
+margin-top: 5px;
+color: white;
+font-style: italic;
+text-shadow: 5px 5px 10px black;
+margin-top: 5%;
+}
+img{
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+
+}
+
+</style>
+<body>
+    <header>
+       <h1>Hora do Dia</h1>
+    </header>
+    <section >
+
+<div id="txt" >
+<h4></h4>
+ 
+</div>
+<div >
+<img src="" alt="" id="fotos">
+</div>
+
+
+
+    </section>
+   <footer>
+     <p>&copy; Lucineia Silva - 2022</p>
+   </footer>
+   <script>
+var agora = new Date()
+var hora = agora.getHours()
+var minutos = agora.getMinutes()
+var txt = document.getElementById('txt')
+var body = document.querySelector('body')
+var img = document.getElementById('fotos')
+ 
+if (hora <=12){
+    txt.innerHTML += `<h4>BOM DIA!<h4>
+    <br><p>Agora são<strong> ${hora}:${minutos}</strong>   horas`
+ 
+ body.style.background='rgb(241, 170, 93)'
+ img.src = 'dia (1).jpg'
+
+
+}else if (hora >12 && hora <= 18){
+    txt.innerHTML += `<h4>BOA TARDE!</h4>
+    <p>Agora são<strong> ${hora}:${minutos}</strong>   horas`
+    img.src  = 'tarde.jpg'
+    body.style.background = '#fce187'
+  
+}else { 
+
+txt.innerHTML += `<h4>BOA NOITE!</h4><br>
+    <br><p>Agora são<strong> ${hora}:${minutos}</strong>   horas`
+img.src = 'noite.jpg'
+body.style.background
+  ='#aaa'
+}   
+</script> 
+   
+</body>
+
+</html>
