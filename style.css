@@ -22,7 +22,7 @@ header{
 }
 header a:hover{
   font-size: 20px;
-  transition: 1.4s linear;
+  transition: 1s linear;
  text-shadow: 2px 2px 6px;
   color :white;
 
